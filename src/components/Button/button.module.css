@@ -1,0 +1,37 @@
+.btn {
+  border-radius: 4px;
+  height: 36px;
+  padding: 10px 14px;
+  border: solid 1px var(--gray-500);
+  cursor: pointer;
+  font-size: 16px;
+  min-width: 150px;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.default {
+  background-color: var(--gray-100);
+}
+
+.default:hover {
+  background-color: var(--gray-200);
+}
+
+.default:active {
+  background-color: var(--gray-300);
+}
+
+.submit {
+  background-color: var(--info-400);
+}
+
+.submit:hover {
+  background-color: var(--info-300);
+}
+
+.submit:active {
+  background-color: var(--info-200);
+}

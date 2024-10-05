@@ -1,0 +1,8 @@
+.section {
+  border: solid 1px var(--gray-200);
+  border-radius: 8px;
+  padding: 16px;
+  background-color: var(--white);
+  border: solid 1px var(--gray-200);
+  overflow: auto;
+}

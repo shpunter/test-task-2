@@ -1,0 +1,25 @@
+.comment {
+  position: relative;
+}
+
+.author {
+  width: 100%;
+  border-top: solid 2px var(--gray-300);
+  margin: 18px 0 6px 0;
+}
+
+.author::before {
+  position: absolute;
+  content: attr(data-email);
+  top: 0;
+  right: 16px;
+  transform: translate(0, -50%);
+  font-size: 12px;
+  font-weight: 700;
+  background-color: white;
+  padding: 0 6px;
+}
+
+.body {
+  padding: 0 6px;
+}

@@ -1,0 +1,6 @@
+.header {
+  grid-area: header;
+  background-color: var(--white);
+  border: solid 1px var(--gray-200);
+  padding: 16px;
+}

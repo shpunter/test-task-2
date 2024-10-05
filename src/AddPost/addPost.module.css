@@ -1,0 +1,13 @@
+.footer {
+  display: flex;
+  gap: 18px;
+  justify-content: flex-end;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 500px;
+  margin-bottom: 16px;
+}

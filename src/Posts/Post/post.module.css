@@ -1,0 +1,116 @@
+.post {
+  padding: 16px;
+  border: solid 1px var(--gray-200);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--black);
+  position: relative;
+  background-color: var(--gray-100);
+  min-width: 300px;
+}
+
+.post::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 22px;
+  background: linear-gradient(transparent 10%, var(--gray-100) 100%);
+}
+
+.title {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.active {
+  background-color: var(--info-200);
+}
+
+.limited {
+  --max-lines: 3;
+  --line-height: 1.4;
+
+  height: calc(var(--max-lines) * 1em * var(--line-height));
+  line-height: var(--line-height);
+  overflow: hidden;
+}
+
+.comments {
+  display: none;
+}
+
+.post:has(input:checked) .comments {
+  display: block;
+}
+
+.post:has(input:checked) {
+  height: auto;
+}
+
+.showHide {
+  appearance: none;
+  border: solid 1px var(--gray-200);
+  border-radius: 8px;
+  width: 70px;
+  height: 20px;
+  cursor: pointer;
+  background-color: var(--white);
+}
+
+.showHide:hover {
+  background-color: var(--gray-100);
+}
+
+.showHide::before,
+.showHide:checked::before {
+  height: 100%;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.showHide::before {
+  content: "Expand";
+}
+
+.showHide:checked::before {
+  content: "Collapse";
+}
+
+.pending {
+  background-color: var(--warning-50);
+}
+
+.delete {
+  cursor: pointer;
+}
+
+.delete::after {
+  display: inline-block;
+  padding: 3px;
+  content: "\00d7";
+  display: flex;
+  font-size: 16px;
+  line-height: 9px;
+  font-weight: 600;
+  justify-content: center;
+}
+
+.actions {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.delete:hover {
+  background-color: var(--error-500);
+  border-radius: 3px;
+  width: 16px;
+  height: 16px;
+}
